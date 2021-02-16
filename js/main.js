@@ -1,6 +1,6 @@
-import Images from './gallery-items.js';
+import images from './gallery-items.js';
 
-const urls = Images.map(({ original }) => {
+const urls = images.map(({ original }) => {
   return original;
 });
 
@@ -17,7 +17,7 @@ const refs = {
 };
 
 const createItem = function () {
-  const itemHTML = Images.reduce((acc, { preview, original, description }) => {
+  const itemHTML = images.reduce((acc, { preview, original, description }) => {
     acc += `<li class="gallery__item">\
     <a class="gallery__link" href="${original}">\
       <img class="gallery__image"\
